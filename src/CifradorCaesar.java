@@ -18,10 +18,10 @@ public class CifradorCaesar {
                 mensajeCifrado += letra;
             else {
                 int ascii = (int)letra;
-                int baseAscii = (int)'a';
+                int baseAscii = (int)'z';
                 if(mayuscula)
-                    baseAscii = (int)'A';
-                int nuevoAscii = (ascii - baseAscii + veces) % 26 + baseAscii;
+                    baseAscii = (int)'Z';
+                int nuevoAscii = (ascii - baseAscii - veces) % 26 + baseAscii;
                 char nuevaLetra = (char)nuevoAscii;
                 mensajeCifrado += nuevaLetra;
             }
